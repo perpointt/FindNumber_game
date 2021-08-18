@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum StatusGame{
+    case start
+    case win
+}
+
 
 class Game {
     
@@ -22,6 +27,8 @@ class Game {
     private var counItems:Int
     
     var nextItem:Item?
+    
+    var status:StatusGame = .start
     
      init(counItems:Int){
         self.counItems = counItems
@@ -42,6 +49,10 @@ class Game {
         if items[index].title==nextItem?.title{
             items[index].isFound = true
             nextItem = items.shuffled().first(where: {(item)-> Bool in item.isFound == false})
+        }
+        
+        if nextItem == nil {
+            status = .win
         }
     }
     

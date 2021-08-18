@@ -228,6 +228,7 @@
                     </view>
                     <connections>
                         <outlet property="nextDigit" destination="RCW-tV-rNv" id="dVH-a2-o8T"/>
+                        <outlet property="statusLabel" destination="Zbs-ze-FtL" id="qgH-PF-Abu"/>
                         <outletCollection property="buttons" destination="zsj-QS-uzH" collectionClass="NSMutableArray" id="4V1-lH-cM7"/>
                         <outletCollection property="buttons" destination="EF1-Mg-m3y" collectionClass="NSMutableArray" id="zFd-HT-r5N"/>
                         <outletCollection property="buttons" destination="xzz-Ac-3WF" collectionClass="NSMutableArray" id="VQh-8m-5cm"/>

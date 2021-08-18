@@ -13,6 +13,7 @@ class GameViewController: UIViewController {
 
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var nextDigit: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,11 @@ class GameViewController: UIViewController {
             buttons[index].isHidden = game.items[index].isFound
         }
         nextDigit.text = game.nextItem?.title
+        
+        if game.status == .win {
+            statusLabel.text = "Вы выйграли!"
+            statusLabel.textColor = .green
+        }
     }
     
    
